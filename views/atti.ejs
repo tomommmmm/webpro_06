@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>あっち向いてホイ！！</title>
+</head>
+<body>
+    <h1>あっち向いてほい！</h1> 
+    <p>cpuの向きは<%= cpu %>です．</p>
+    <p>あなたの向きは<%= me %>です．</p>
+    <p>あなたの<%= judgement %>！！</p>
+    <p>現在<%= total %>試合中<%= win %>勝しています．</p>
+    <hr>
+    <form action="/atti">
+        <label for="charenge">あっち向いて，，，</label>
+            <input type="radio" name="charenge" id="up" value="上">
+            <label for="up">上</label>
+
+            <input type="radio" name="charenge" id="down" value="下">
+            <label for="down">下</label>
+
+            <input type="radio" name="charenge" id="left" value="左">
+            <label for="left">左</label>
+
+            <input type="radio" name="charenge" id="right" value="右">
+            <label for="right">右</label>
+        </div>
+        <input type="submit" value="ほい！！">
+        <input type="hidden" name="won" value="<%= win %>">
+        <input type="hidden" name="zenbu" value="<%= total %>">
+    </form>   
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>コイントス！！</title>
+    <style>
+        /* ラジオボタンとラベルを横並びにする */
+        .predict-group {
+            display: flex;
+            gap: 10px; /* ラジオボタンとラベルの間隔 */
+        }
+
+        .predict-group label {
+            margin-left: 5px; /* ラベルの左側の余白 */
+        }
+    </style>
+</head>
+<body>
+    <h1>コイントス！！</h1>
+    <p>あなたの予想は<%= me %>です．</p>
+    <p>cpuのコインは<%= cpu %>です．</p>
+    <p>あなたの予想は<%= judgement %>ました！</p>
+    <p>現在<%= total %>試合中<%= win %>勝しています．</p>
+    <hr>
+    <form action="/cointosu">
+        <label for="predict">予想は？</label>
+        <div class="predict-group">
+            <input type="radio" name="predict" id="head" value="表">
+            <label for="head">表</label>
+
+            <input type="radio" name="predict" id="tail" value="裏">
+            <label for="tail">裏</label>
+        </div>
+        <input type="submit" value="どうかな？">
+        <input type="hidden" name="kati" value="<%= win %>">
+        <input type="hidden" name="all" value="<%= total %>">
+    </form>   
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>コイントス！！</title>
+</head>
+<body>
+  <h1>コイントス！！</h1>
+  <p>あなたの予想: <%= cpu %></p>
+  <p>cpuのコイン: <%= me %></p>
+  <p>結果: <%= judgement %></p>
+  <p>勝利回数: <%= win %></p>
+  <p>総回数: <%= total %></p>
+
+  <form method="get" action="/atti">
+    <label for="ball">表と裏どっちかな？:</label>
+    <input type="text" id="ball" name="ball" required>
+    <button type="submit">答える</button>
+  </form>
+</body>
+</html>
