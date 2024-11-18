@@ -23,6 +23,10 @@ app.get("/luck", (req, res) => {
   let luck = '';
   if( num==1 ) luck = '大吉';
   else if( num==2 ) luck = '中吉';
+  else if( num==3 ) luck = '小吉';
+  else if( num==4 ) luck = '吉';
+  else if( num==5 ) luck = '末吉';
+  else if( num==6 ) luck = '凶';
   console.log( 'あなたの運勢は' + luck + 'です' );
   res.render( 'luck', {number:num, luck:luck} );
 });
@@ -79,11 +83,10 @@ app.get("/janken", (req, res) => {                //Expressのルートハンド
 let won = 0;
 let zenbu = 0;
 
-// クイズのルート
+
 app.get("/atti", (req, res) => {
   let charenge = req.query.charenge;  // ユーザーの入力
 
-  //console.log({ ball: charenge, zenbu });
 
   const num = Math.floor(Math.random() * 4 + 1);  // ランダムな数字を生成
   let cpu = '';                                        
@@ -94,7 +97,7 @@ app.get("/atti", (req, res) => {
 
   let judgement = '';  // judgementを初期化
 
-  // クイズの答えを判定
+  
   if (charenge === cpu) {
     judgement = '負け'; 
     
