@@ -1,0 +1,25 @@
+flowchart TD;
+
+start["開始"];
+finish["終了"]
+player[プレーヤーの手を入手]
+let1[1から3の整数の乱数を生成]
+let2[cpuの手を乱数で決める]
+if1{"cpuとプレーヤーぼ手が同じであるか"}
+if2{"プレーヤーの勝ちか"}
+aiko[あいこ]
+win[勝ち]
+loose[負け]
+
+
+start --> player
+player --> let1
+let1 --> let2
+let2 --> if1
+if1 -->|Yes| aiko
+if1 -->|No| if2
+if2 -->|Yes| win
+if2 -->|No| loose
+aiko --> finish
+win --> finish
+loose --> finish

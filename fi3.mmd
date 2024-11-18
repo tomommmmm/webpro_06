@@ -1,0 +1,20 @@
+flowchart TD;
+
+start["開始"];
+finish["終了"]
+player[プレーヤーの予想した向きを入手]
+let1[1から2の整数の乱数を生成]
+let2[cpuのコインの向きを乱数で決める]
+if{"プレーヤーの予想した向きと同じであるか"}
+win[勝ち]
+loose[負け]
+
+
+start --> player
+player --> let1
+let1 --> let2
+let2 --> if
+if -->|Yes| win
+if -->|No| loose
+win --> finish
+loose --> finish

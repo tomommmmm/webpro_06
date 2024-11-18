@@ -1,0 +1,20 @@
+flowchart TD;
+
+start["開始"];
+finish["終了"]
+player[プレーヤーの向きを入手]
+let1[1から4の整数の乱数を生成]
+let2[cpuの手の向きを乱数で決める]
+if{"cpuとプレーヤーの向きが同じであるか"}
+win[勝ち]
+loose[負け]
+
+
+start --> player
+player --> let1
+let1 --> let2
+let2 --> if
+if -->|Yes| loose
+if -->|No| win
+win --> finish
+loose --> finish
