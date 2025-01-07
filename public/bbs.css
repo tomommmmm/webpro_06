@@ -1,0 +1,111 @@
+/* 投稿のスタイル */
+.cover {
+    border-bottom: 1px solid #c0c0c0;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.name {
+    font-weight: bold;
+    width: 8em;
+    display: inline-block;
+}
+
+.mes {
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.cover .edit-btn, .cover .delete-btn, .cover .reply-btn {
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ddd;
+    transition: background-color 0.3s;
+}
+
+.cover .edit-btn:hover {
+    background-color: #45a049;
+}
+
+.cover .delete-btn:hover {
+    background-color: #e74c3c;
+}
+
+.cover .reply-btn:hover {
+    background-color: #3498db;
+}
+
+/* 編集フォームのスタイル */
+.cover input, .cover textarea {
+    margin: 5px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.cover .save-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.cover .save-btn:hover {
+    background-color: #27ae60;
+}
+
+/* 返信のスタイル */
+.reply {
+    margin-left: 20px;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border-radius: 5px;
+    border-left: 2px solid #3498db;
+}
+
+.reply .name {
+    font-weight: bold;
+    color: #2980b9;
+}
+
+.reply .mes {
+    margin-left: 20px;
+    color: #555;
+}
+
+/* 投稿の下のボタンの間隔 */
+#posts {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+#check {
+    background-color: #3498db;
+    color: white;
+}
+
+#post {
+    background-color: #2ecc71;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
